@@ -16,13 +16,13 @@ app.get("/", (req, res) => {
     res.send("Hello World");
 });
 
-app.use(logger);
-app.use(notFound);
 app.use(cors());
 app.use(express.json());
 app.use("/api/employee", employee);
 app.use("/api/section", section);
 
+app.use(logger);
+app.use(notFound);
 app.use((req, res) => {
   res.status(404).json({
     error: "Not found"
