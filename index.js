@@ -3,9 +3,9 @@ const express = require("express");
 const PORT = process.env.PORT || 1234;
 const app = express();
 const cors = require("cors");
-const customer = require("./postgres");
+// const customer = require("./postgres");
 
-customer.connect();
+// customer.connect();
 const logger = require("./middleware/loggermiddleware");
 const notFound = require("./middleware/notFound");
 
